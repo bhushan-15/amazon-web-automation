@@ -1,0 +1,21 @@
+
+{
+  "name": "amazon-p0-automation",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Amazon.in P0 UI smoke tests using Playwright and TypeScript",
+  "scripts": {
+    "setup": "playwright install chromium",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:one": "playwright test -g P0-01",
+    "report": "playwright show-report reports/html",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
